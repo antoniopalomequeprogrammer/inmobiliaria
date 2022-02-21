@@ -32,7 +32,7 @@ export default function Header(props) {
   return (
     <div >
       <CssBaseline />
-      <AppBar position="fixed" style={{background:"brown"}}>
+      <AppBar position="fixed" style={{background:"#376996",display:"flex"}}>
         <Toolbar>
           <Typography variant="h6" noWrap>
             <Link to="/home"></Link>
@@ -46,7 +46,7 @@ export default function Header(props) {
             </Button>
           ) : (
             <Button color="inherit" onClick={login}>
-              Iniciar Sesión
+              Acceder
             </Button>
           )}
         </Toolbar>

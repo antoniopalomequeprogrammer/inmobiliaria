@@ -11,8 +11,11 @@ function RegisterComponent() {
   //const authResponse = useSelector(state=>state.userAuth.authResponse);
   const [fields, setState] = useState({
     name: "",
+    apellidos:"",
+    telefono:"",
     email: "",
     password: "",
+    role_id: "1",
     password_confirmation: "",
   });
   const handleFieldChange = (e) => {
@@ -52,9 +55,31 @@ function RegisterComponent() {
                 required
                 margin="normal"
                 variant="outlined"
-                label="name"
+                label="Nombre"
                 id="name"
                 value={fields.name}
+                onChange={handleFieldChange}
+              />
+              <TextField
+                type="text"
+                className={classes.fullWidth}
+                required
+                margin="normal"
+                variant="outlined"
+                label="Apellidos"
+                id="apellidos"
+                value={fields.apellidos}
+                onChange={handleFieldChange}
+              />
+              <TextField
+                type="number"
+                className={classes.fullWidth}
+                required
+                margin="normal"
+                variant="outlined"
+                label="Teléfono"
+                id="telefono"
+                value={fields.telefono}
                 onChange={handleFieldChange}
               />
             </div>
@@ -65,7 +90,7 @@ function RegisterComponent() {
                 required
                 margin="normal"
                 variant="outlined"
-                label="email"
+                label="Email"
                 id="email"
                 value={fields.email}
                 onChange={handleFieldChange}
@@ -75,7 +100,7 @@ function RegisterComponent() {
               <div>
                 <TextField
                   className={classes.fullWidth}
-                  label="Password"
+                  label="Contraseña"
                   type="password"
                   margin="normal"
                   variant="outlined"
@@ -88,7 +113,7 @@ function RegisterComponent() {
               <div>
                 <TextField
                   className={classes.fullWidth}
-                  label="Confirm Password"
+                  label="Confirmar Contraseña"
                   type="password"
                   required
                   margin="normal"
